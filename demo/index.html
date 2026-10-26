@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Component lab Klinik Sepatu" />
+    <title>Klinik Sepatu | Component Lab</title>
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="shell nav" aria-label="Navigasi utama">
+        <a href="#lab" aria-label="Klinik Sepatu component lab">
+          <img class="brand-logo" src="../assets/brand/horizontal-web.png" alt="Klinik Sepatu" />
+          <img class="brand-icon" src="../assets/brand/icon-web.png" alt="" />
+        </a>
+        <ul class="nav-list">
+          <li><a href="#treatment">Treatment</a></li>
+          <li><a href="#proof">Bukti</a></li>
+          <li><a href="#form">Form</a></li>
+          <li><a class="button button--inverse" href="https://api.whatsapp.com/send/?phone=6287712783593&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">Kirim Foto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="lab">
+      <section class="section shell stack" aria-labelledby="intro-title">
+        <p class="eyebrow">Alpha / component lab</p>
+        <h1 id="intro-title">Sistem keputusan untuk kerja workshop.</h1>
+        <p>Rujukan komponen, states, dan konten. Bukan landing page final. Gunakan foto pengerjaan asli yang telah dipetakan pemilik saat implementasi produk.</p>
+        <div class="cluster" aria-label="Contoh CTA">
+          <a class="button button--inverse" href="https://api.whatsapp.com/send/?phone=6287712783593&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">Kirim Foto via WhatsApp</a>
+          <a class="link-control" href="#treatment">Lihat treatment</a>
+          <a class="button button--quiet" href="#faq">Baca FAQ</a>
+        </div>
+      </section>
+
+      <section id="treatment" class="section section--inverse" aria-labelledby="treatment-title">
+        <div class="shell stack">
+          <div><p class="eyebrow">Treatment / product / meta</p><h2 id="treatment-title">Kartu untuk memindai pilihan.</h2></div>
+          <div class="grid">
+            <article class="card card--inverse">
+              <div class="card__media">AREA FOTO RESMI / FAST CLEAN</div>
+              <h3>Fast Clean</h3><p>Pembersihan bagian luar: upper, outsole, dan midsole.</p>
+              <div class="meta-row"><span>per pasang</span><span class="price">30K / 1-2 hari</span></div>
+              <a class="button" href="https://api.whatsapp.com/send/?phone=6287712783593&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">Tanyakan layanan ini</a>
+            </article>
+            <article class="card card--inverse">
+              <div class="card__media">AREA FOTO RESMI / REGLUE</div>
+              <h3>Reglue</h3><p>Kemungkinan untuk sol lepas atau terbuka; kondisi diperiksa lewat foto.</p>
+              <div class="meta-row"><span>hari kalender</span><span class="price">50-200K / 5-7 hari</span></div>
+              <a class="button" href="https://api.whatsapp.com/send/?phone=6287712783593&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">Kirim foto kondisi</a>
+            </article>
+            <article class="card card--inverse">
+              <div class="card__media">AREA PACKSHOT RESMI / FOAM CLEANER</div>
+              <h3>Foam Cleaner</h3><p>Produk perawatan. Harga dan stok marketplace dapat berubah.</p>
+              <div class="meta-row"><span>100 ml</span><span class="price">40K</span></div>
+              <a class="button" href="https://shopee.co.id/kliniksepatu.ind" target="_blank" rel="noreferrer">Cek di Shopee</a>
+            </article>
+          </div>
+          <p>Cleaning dihitung per pasang. Gear Care per item. Repair memakai rentang sesuai jenis dan kerusakan; estimasi dimulai setelah konsultasi selesai dan barang diterima outlet.</p>
+        </div>
+      </section>
+
+      <section id="proof" class="section shell stack" aria-labelledby="proof-title">
+        <div><p class="eyebrow">Proof card / badges</p><h2 id="proof-title">Dokumentasi, bukan janji hasil.</h2></div>
+        <div class="grid">
+          <article class="card"><span class="badge">Sebelum</span><div class="card__media">SLOT FOTO DRIVE TERPETAKAN</div><h3>Kondisi awal</h3><p>Tambahkan alt berdasarkan foto aktual.</p></article>
+          <article class="card"><span class="badge">Sesudah</span><div class="card__media">SLOT FOTO DRIVE TERPETAKAN</div><h3>Hasil pengerjaan</h3><p>Label treatment hanya setelah mapping service dikonfirmasi.</p></article>
+          <article class="card"><span class="badge badge--draft">Kebijakan draft</span><h3>Komplain</h3><p>Rekomendasi menunggu approval owner dan tidak menghapus hak konsumen.</p><a href="../docs/complaint-policy-draft.md">Baca draft</a></article>
+        </div>
+      </section>
+
+      <section id="form" class="section shell stack" aria-labelledby="form-title">
+        <div><p class="eyebrow">Input / state inventory</p><h2 id="form-title">Form yang mengarahkan ke konsultasi.</h2></div>
+        <div class="grid">
+          <label class="field">Nama<input type="text" placeholder="Nama Anda" /></label>
+          <label class="field is-error">Nomor WhatsApp<input type="tel" value="08" aria-describedby="phone-error" /><span id="phone-error" class="field__message">Masukkan nomor yang dapat dihubungi.</span></label>
+          <label class="field is-success">Foto kondisi<input type="text" value="4 foto siap dikirim" readonly /><span class="field__message">Depan, samping, sol, dan area bermasalah sudah dicatat.</span></label>
+        </div>
+        <div class="cluster" aria-label="State tombol"><button class="button" type="button">Default</button><button class="button" type="button" disabled>Disabled</button><button class="button is-loading" type="button">Mengirim</button><button class="button is-success" type="button">Terkirim</button><button class="button is-error" type="button">Coba lagi</button></div>
+      </section>
+
+      <section id="faq" class="section shell stack faq" aria-labelledby="faq-title">
+        <div><p class="eyebrow">FAQ / native disclosure</p><h2 id="faq-title">Pertanyaan yang sering menentukan.</h2></div>
+        <details><summary>Apakah estimasi memakai hari kerja?</summary><p>Estimasi menggunakan hari kalender, termasuk hari libur.</p></details>
+        <details><summary>Bagaimana harga repair ditentukan?</summary><p>Rentang pada price list menjadi referensi; harga final bergantung pada jenis dan tingkat kerusakan setelah konsultasi.</p></details>
+        <details><summary>Bagaimana pelanggan jauh mengirim barang?</summary><p>Pickup atau delivery dapat memakai kurir/ekspedisi pihak luar sesuai persetujuan. Detail pembayaran transfer rekening diberikan lewat WhatsApp setelah konsultasi.</p></details>
+      </section>
+    </main>
+    <footer class="section section--inverse">
+      <div class="shell stack">
+        <img src="../assets/brand/stacked-web.png" alt="Klinik Sepatu" width="160" />
+        <p>Jl. Mercedes Benz, Cicadas, Kec. Gn. Putri, Kabupaten Bogor, Jawa Barat 16964, Indonesia.</p>
+        <a href="https://maps.app.goo.gl/914Dq6NfQLnUDcw28" target="_blank" rel="noreferrer">Lihat Google Maps</a>
+      </div>
+    </footer>
+    <a class="button button--inverse mobile-wa" href="https://api.whatsapp.com/send/?phone=6287712783593&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">Kirim Foto via WhatsApp</a>
+  </body>
+</html>

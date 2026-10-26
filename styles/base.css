@@ -1,0 +1,32 @@
+@import url("./tokens.css");
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--surface-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-underline-offset: 0.18em; }
+button, input, textarea, select { font: inherit; }
+h1, h2, h3, p { margin-block: 0; }
+h1 { max-width: 16ch; font-size: var(--font-size-heading-1); line-height: var(--line-height-tight); letter-spacing: var(--letter-spacing-tight); }
+h2 { max-width: 22ch; font-size: var(--font-size-heading-2); line-height: var(--line-height-heading); letter-spacing: -0.025em; }
+h3 { font-size: var(--font-size-heading-3); line-height: var(--line-height-heading); }
+p { max-width: 68ch; }
+:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+::selection { background: var(--color-ink); color: var(--color-white); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: var(--motion-duration-instant) !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: var(--motion-duration-instant) !important;
+  }
+}

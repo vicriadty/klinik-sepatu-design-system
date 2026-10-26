@@ -1,0 +1,15 @@
+{
+  "name": "klinik-sepatu-design-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate.mjs",
+    "lint:design": "npx -y @google/design.md lint DESIGN.md",
+    "export:tokens": "mkdir -p exports && npx -y @google/design.md export --format dtcg DESIGN.md > exports/tokens.dtcg.json",
+    "export:tailwind": "mkdir -p exports && npx -y @google/design.md export --format json-tailwind DESIGN.md > exports/tailwind.tokens.json && npx -y @google/design.md export --format css-tailwind DESIGN.md > exports/tailwind.tokens.css",
+    "smoke": "node scripts/smoke.mjs",
+    "check": "npm test && npm run validate && npm run lint:design && npm run export:tokens && npm run export:tailwind && npm run smoke"
+  }
+}
